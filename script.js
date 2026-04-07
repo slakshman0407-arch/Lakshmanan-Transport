@@ -120,4 +120,20 @@ document.addEventListener('DOMContentLoaded', () => {
             .bindPopup('<b style="color: #121212;">Lakshmanan Transport</b><br><span style="color: #333;">Madhavaram Truck Hub</span>')
             .openPopup();
     }
+
+    // WhatsApp Form Submission Handler
+    const whatsappForm = document.getElementById('whatsappForm');
+    if (whatsappForm) {
+        whatsappForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const company = document.getElementById('company').value;
+            const phone = document.getElementById('phone').value;
+            
+            const message = `Hello Lakshmanan Transport, I have an enquiry.\n\nName: ${name}\nCompany: ${company}\nPhone: ${phone}\n\nPlease get back to me.`;
+            const whatsappUrl = `https://wa.me/919962603684?text=${encodeURIComponent(message)}`;
+            
+            window.open(whatsappUrl, '_blank');
+        });
+    }
 });
