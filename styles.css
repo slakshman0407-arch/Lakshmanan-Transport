@@ -1102,6 +1102,13 @@ img {
     display: none;
 }
 
+.service-detail-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
 @media (max-width: 1024px) {
     .top-bar-container {
         justify-content: center;
@@ -1301,7 +1308,8 @@ img {
     .about-new-container,
     .contact-card,
     .pill-cards-grid,
-    .gallery-grid {
+    .gallery-grid,
+    .service-detail-container {
         grid-template-columns: 1fr;
         gap: 30px;
     }

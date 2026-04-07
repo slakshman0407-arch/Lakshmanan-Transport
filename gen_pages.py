@@ -9,7 +9,7 @@ layout_template = """<!DOCTYPE html>
     <title>{title} | Lakshmanan Transport</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=4">
+    <link rel="stylesheet" href="styles.css?v=7">
 </head>
 <body>
     <header class="navbar" id="navbar">
@@ -55,7 +55,7 @@ layout_template = """<!DOCTYPE html>
         </section>
 
         <section class="service-detail section-padding" style="padding: 100px 0; background: #fafafa;">
-            <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+            <div class="container service-detail-container">
                 <div class="service-detail-content">
                     <h2 style="font-size: 2.8rem; color: var(--secondary); margin-bottom: 30px; font-weight: 800;">{title}</h2>
                     {paragraphs}
