@@ -29,9 +29,59 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const mobileToggle = document.getElementById('mobile-toggle');
-    if (mobileToggle) {
+    const navLinks = document.querySelector('.nav-links');
+    const headerContact = document.querySelector('.header-contact');
+
+    if (mobileToggle && navLinks && headerContact) {
+        // Create mobile menu container
+        const mobileMenu = document.createElement('div');
+        mobileMenu.className = 'mobile-menu-container';
+        
+        // Clone elements
+        const clonedNav = navLinks.cloneNode(true);
+        const clonedContact = headerContact.cloneNode(true);
+        // Correct display style from stylesheet since cloned elements might get 'display: none' inline somehow if hidden but they don't here because it's CSS media query
+        clonedNav.style.display = 'flex';
+        clonedContact.style.display = 'flex';
+        
+        mobileMenu.appendChild(clonedNav);
+        mobileMenu.appendChild(clonedContact);
+        document.body.appendChild(mobileMenu);
+        
+        // Handle Mobile Dropdown
+        const mobileNavItems = mobileMenu.querySelectorAll('.nav-item');
+        mobileNavItems.forEach(item => {
+            const link = item.querySelector('a');
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                item.classList.toggle('active');
+                const icon = link.querySelector('i');
+                if(icon) {
+                    if(item.classList.contains('active')) {
+                        icon.classList.replace('bx-chevron-down', 'bx-chevron-up');
+                    } else {
+                        icon.classList.replace('bx-chevron-up', 'bx-chevron-down');
+                    }
+                }
+            });
+        });
+
+        // Close menu when clicking regular links
+        const allLinks = mobileMenu.querySelectorAll('a:not(.nav-item > a)');
+        allLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                document.body.classList.remove('menu-open');
+                mobileToggle.innerHTML = "<i class='bx bx-menu'></i>";
+            });
+        });
+        
         mobileToggle.addEventListener('click', () => {
-            alert("Mobile menu clicked (implement slide menu here)");
+            document.body.classList.toggle('menu-open');
+            if (document.body.classList.contains('menu-open')) {
+                mobileToggle.innerHTML = "<i class='bx bx-x'></i>";
+            } else {
+                mobileToggle.innerHTML = "<i class='bx bx-menu'></i>";
+            }
         });
     }
 
