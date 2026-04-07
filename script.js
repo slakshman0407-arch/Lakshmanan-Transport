@@ -46,6 +46,17 @@ document.addEventListener('DOMContentLoaded', () => {
         
         mobileMenu.appendChild(clonedNav);
         mobileMenu.appendChild(clonedContact);
+
+        // Add close X button inside the menu
+        const closeBtn = document.createElement('button');
+        closeBtn.className = 'mobile-menu-close';
+        closeBtn.innerHTML = "<i class='bx bx-x'></i>";
+        closeBtn.addEventListener('click', () => {
+            document.body.classList.remove('menu-open');
+            mobileToggle.innerHTML = "<i class='bx bx-menu'></i>";
+        });
+        mobileMenu.appendChild(closeBtn);
+
         document.body.appendChild(mobileMenu);
         
         // Handle Mobile Dropdown
