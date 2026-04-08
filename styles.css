@@ -789,7 +789,7 @@ img {
 }
 
 .about-headline {
-    font-size: 3.2rem;
+    font-size: 2.2rem;
     font-weight: 800;
     margin-bottom: 24px;
     color: var(--secondary);
@@ -1568,11 +1568,11 @@ img {
         right: 30px;
         font-size: 32px;
     }
-    
+
     .enquiry-form-card {
         padding: 40px 24px;
     }
-    
+
     .enquiry-form-card h2 {
         font-size: 1.8rem;
     }
