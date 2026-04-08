@@ -5,8 +5,8 @@ layout_template = """<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{title} services by Lakshmanan Transport">
-    <title>{title} | Lakshmanan Transport</title>
+    <meta name="description" content="{meta_description}">
+    <title>{title}</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css?v=7">
@@ -16,7 +16,7 @@ layout_template = """<!DOCTYPE html>
         <div class="container nav-container">
             <div class="logo">
                 <a href="index.html#home">
-                    <img src="assets/logo.png" alt="Lakshmanan Transport Logo" class="header-logo"
+                    <img src="assets/logo.png" alt="Lakshmanan Transport – Forklift company Chennai" class="header-logo"
                         style="height: 60px; max-height: 60px; width: auto; object-fit: contain;">
                 </a>
             </div>
@@ -50,21 +50,21 @@ layout_template = """<!DOCTYPE html>
         <section class="page-hero" style="background-image: url('assets/hero.png'); background-size: cover; background-position: center; position: relative; padding: 150px 0 80px 0; text-align: center; color: #fff; display: flex; align-items: center; justify-content: center; min-height: 250px;">
             <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(24,51,89,0.95) 0%, rgba(24,51,89,0.7) 100%); z-index: 1;"></div>
             <div class="container" style="position: relative; z-index: 2;">
-                <h1 style="font-size: 3.5rem; margin-bottom: 15px; font-weight: 800; text-shadow: 0 4px 15px rgba(0,0,0,0.3);">{title}</h1>
-                <p style="font-size: 1.1rem; color: rgba(255,255,255,0.9); font-weight: 500;">You are here: <a href="index.html" style="color: var(--primary); font-weight: 700;">Home</a> / {title}</p>
+                <h1 style="font-size: 3.5rem; margin-bottom: 15px; font-weight: 800; text-shadow: 0 4px 15px rgba(0,0,0,0.3);">{page_title}</h1>
+                <p style="font-size: 1.1rem; color: rgba(255,255,255,0.9); font-weight: 500;">You are here: <a href="index.html" style="color: var(--primary); font-weight: 700;">Home</a> / {page_title}</p>
             </div>
         </section>
 
         <section class="service-detail section-padding" style="padding: 100px 0; background: #fafafa;">
             <div class="container service-detail-container">
                 <div class="service-detail-content">
-                    <h2 style="font-size: 2.8rem; color: var(--secondary); margin-bottom: 30px; font-weight: 800;">{title}</h2>
+                    <h2 style="font-size: 2.8rem; color: var(--secondary); margin-bottom: 30px; font-weight: 800;">{page_title}</h2>
                     {paragraphs}
                     <a href="https://wa.me/919962603684" class="btn btn-primary" style="margin-top: 10px; background:#25d366; color:#fff; border:none;"><i class='bx bxl-whatsapp' style='font-size:1.4rem; margin-right:8px;'></i> Reply on WhatsApp</a>
                 </div>
                 <div class="service-detail-image" style="padding: 20px; background: #fff; border-radius: var(--radius-lg); box-shadow: 0 20px 50px rgba(0,0,0,0.08); border: 8px solid var(--primary); position: relative;">
                     <div style="position: absolute; top: -20px; left: -20px; background: var(--secondary); color: #fff; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 2rem; box-shadow: 0 10px 20px rgba(0,0,0,0.2);"><i class='bx bxs-check-shield'></i></div>
-                    <img src="{image}" alt="{title} service" style="width: 100%; border-radius: var(--radius-md); display: block; object-fit: cover; aspect-ratio: 4/3;">
+                    <img src="{image}" alt="{title}" style="width: 100%; border-radius: var(--radius-md); display: block; object-fit: cover; aspect-ratio: 4/3;">
                 </div>
             </div>
         </section>
@@ -73,7 +73,7 @@ layout_template = """<!DOCTYPE html>
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-brand">
-                <div class="logo"><img src="assets/logo.png" alt="Lakshmanan Transport Logo" class="site-logo" style="height: 60px; max-height: 60px; width: auto; object-fit: contain; filter: brightness(0) invert(1) drop-shadow(0 2px 4px rgba(0,0,0,0.2));"></div>
+                <div class="logo"><img src="assets/logo.png" alt="Lakshmanan Transport – Forklift company Chennai" class="site-logo" style="height: 60px; max-height: 60px; width: auto; object-fit: contain; filter: brightness(0) invert(1) drop-shadow(0 2px 4px rgba(0,0,0,0.2));"></div>
                 <p>Reliable forklift rental and industrial lifting services.</p>
                 <div class="social-links">
                     <a href="https://www.facebook.com/profile.php?id=61581690412383" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
@@ -124,31 +124,41 @@ layout_template = """<!DOCTYPE html>
 pages = [
     {
         "filename": "rental.html",
-        "title": "Forklift Rental",
+        "title": "Forklift Rental in Chennai – Short & Long Term Hire | Lakshmanan Transport",
+        "page_title": "Forklift Rental",
+        "meta_description": "Rent a forklift in Chennai with operator included. Diesel, electric & LPG, 1.5T–10T. Daily/weekly/monthly plans. Same-day delivery. Call Lakshmanan Transport.",
         "image": "assets/rental_forklift.png",
         "paragraphs": '<p style="color: var(--text-muted); line-height: 1.8; font-size: 1.15rem; margin-bottom: 24px;">Moving on deep knowledge & industrial experience, we are offering a very effective solution for Forklift Rental Services. We procure the best quality equipments to offer optimum performance at varied industrial sites. Our provided rental services are appreciated in the market for their quality attributes like client centric approach.</p><p style="color: var(--text-muted); line-height: 1.8; font-size: 1.15rem; margin-bottom: 24px;">The range of services provided extends from taking on complete equipment operations for handling of raw materials and finished goods produced by our clients, warehouse management, repair and maintenance of client owned equipment, and manpower management.</p><p style="color: var(--text-muted); line-height: 1.8; font-size: 1.15rem; margin-bottom: 30px;">A dedicated and well-trained workforce consisting of technicians, forklift operators, and engineers have allowed us to achieve high proficiency and success in our operations.</p>'
     },
     {
         "filename": "dealers.html",
-        "title": "Forklift Dealers",
+        "title": "Authorised Forklift Dealers in Chennai & Tamil Nadu | Lakshmanan Transport",
+        "page_title": "Forklift Dealers",
+        "meta_description": "Authorised forklift dealer in Chennai & Tamil Nadu. Manufacturer warranties, genuine parts, expert guidance. Contact Lakshmanan Transport for pricing.",
         "image": "assets/dealer_forklifts.png",
         "paragraphs": '<p style="color: var(--text-muted); line-height: 1.8; font-size: 1.15rem; margin-bottom: 24px;">We are authorized dealers for premium forklift brands in multiple locations. With an extensive inventory of high-performance industrial machines, we guarantee top-tier lifting equipment built for endurance.</p><p style="color: var(--text-muted); line-height: 1.8; font-size: 1.15rem; margin-bottom: 24px;">Our dealership network leverages direct manufacturer connections to provide you with reliable machines at highly competitive prices. Partnering with us gives you dedicated local support, comprehensive warranties, and complete peace of mind.</p><p style="color: var(--text-muted); line-height: 1.8; font-size: 1.15rem; margin-bottom: 30px;">We actively assist you in choosing the optimum model based on your unique terrain, operational height requirements, and payload capabilities.</p>'
     },
     {
         "filename": "sales.html",
-        "title": "Forklift Sales",
+        "title": "New & Used Forklifts for Sale in Chennai | Lakshmanan Transport",
+        "page_title": "Forklift Sales",
+        "meta_description": "Buy new or used forklifts in Chennai. Certified multi-point inspection on all pre-owned machines. All budgets & tonnage. Transparent pricing. Call us today.",
         "image": "assets/sales_forklift.png",
         "paragraphs": '<p style="color: var(--text-muted); line-height: 1.8; font-size: 1.15rem; margin-bottom: 24px;">Lakshmanan Transport offers a diverse catalog of both new and used forklifts for direct purchase. From compact electric reach trucks to heavy-duty diesel engines, we offer solutions custom-tailored for any business budget.</p><p style="color: var(--text-muted); line-height: 1.8; font-size: 1.15rem; margin-bottom: 24px;">Every pre-owned forklift we sell goes through an exhaustive multi-point inspection by certified mechanics, ensuring that it operates as efficiently and securely as a brand new model. We firmly believe in transparent pricing and lasting value.</p><p style="color: var(--text-muted); line-height: 1.8; font-size: 1.15rem; margin-bottom: 30px;">Speak to our sales experts today to find out which machine will maximize your industrial productivity and minimize downtime.</p>'
     },
     {
         "filename": "service.html",
-        "title": "Forklift Service",
+        "title": "Forklift Repair & AMC Service in Chennai | Lakshmanan Transport",
+        "page_title": "Forklift Service",
+        "meta_description": "Forklift repair & AMC service in Chennai. Hydraulic, engine, battery & electrical repairs. All brands. Rapid on-site response. Madhavaram workshop.",
         "image": "assets/service_forklift.png",
         "paragraphs": '<p style="color: var(--text-muted); line-height: 1.8; font-size: 1.15rem; margin-bottom: 24px;">We are highly engaged in offering an optimum quality Forklift Repairing and Maintenance Service. Breakdown in the middle of a project can cost thousands in lost productivity—our rapid-response mechanics are on call exactly when you need them.</p><p style="color: var(--text-muted); line-height: 1.8; font-size: 1.15rem; margin-bottom: 24px;">We provide comprehensive servicing packages including routine checks, battery desulfation, hydraulic system flushes, engine overhauls, and preventative safety audits.</p><p style="color: var(--text-muted); line-height: 1.8; font-size: 1.15rem; margin-bottom: 30px;">Focus on your core operations while relying on us to keep your lifting equipment functionally pristine, fully compliant, and 100% safe.</p>'
     },
     {
         "filename": "clients.html",
-        "title": "Our Clients",
+        "title": "Our Clients | Lakshmanan Transport",
+        "page_title": "Our Clients",
+        "meta_description": "Lakshmanan Transport serves a diverse range of industrial clients across Tamil Nadu with reliable forklift solutions and exceptional support.",
         "image": "assets/fleet.png",
         "paragraphs": '<p style="color: var(--text-muted); line-height: 1.8; font-size: 1.15rem; margin-bottom: 24px;">Over the years, Lakshmanan Transport has built strong relationships with a diverse range of clients across various industries, including manufacturing, logistics, construction, and warehousing. Our commitment to excellence and reliability has made us a preferred partner for industrial lifting solutions.</p><p style="color: var(--text-muted); line-height: 1.8; font-size: 1.15rem; margin-bottom: 24px;">We take pride in serving some of the leading companies in Tamil Nadu, providing them with top-quality forklifts and exceptional service. Our clients trust us for our transparent approach, experienced operators, and 24/7 availability.</p><p style="color: var(--text-muted); line-height: 1.8; font-size: 1.15rem; margin-bottom: 30px;">We continue to expand our reach, aiming to provide the best-in-class transport and material handling solutions to every business we partner with.</p>'
     }
