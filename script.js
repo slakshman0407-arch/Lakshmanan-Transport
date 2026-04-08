@@ -36,14 +36,14 @@ document.addEventListener('DOMContentLoaded', () => {
         // Create mobile menu container
         const mobileMenu = document.createElement('div');
         mobileMenu.className = 'mobile-menu-container';
-        
+
         // Clone elements
         const clonedNav = navLinks.cloneNode(true);
         const clonedContact = headerContact.cloneNode(true);
         // Correct display style from stylesheet since cloned elements might get 'display: none' inline somehow if hidden but they don't here because it's CSS media query
         clonedNav.style.display = 'flex';
         clonedContact.style.display = 'flex';
-        
+
         mobileMenu.appendChild(clonedNav);
         mobileMenu.appendChild(clonedContact);
 
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileMenu.appendChild(closeBtn);
 
         document.body.appendChild(mobileMenu);
-        
+
         // Handle Mobile Dropdown
         const mobileNavItems = mobileMenu.querySelectorAll('.nav-item');
         mobileNavItems.forEach(item => {
@@ -67,8 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.preventDefault();
                 item.classList.toggle('active');
                 const icon = link.querySelector('i');
-                if(icon) {
-                    if(item.classList.contains('active')) {
+                if (icon) {
+                    if (item.classList.contains('active')) {
                         icon.classList.replace('bx-chevron-down', 'bx-chevron-up');
                     } else {
                         icon.classList.replace('bx-chevron-up', 'bx-chevron-down');
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 mobileToggle.innerHTML = "<i class='bx bx-menu'></i>";
             });
         });
-        
+
         mobileToggle.addEventListener('click', () => {
             document.body.classList.toggle('menu-open');
             if (document.body.classList.contains('menu-open')) {
@@ -129,10 +129,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const name = document.getElementById('name').value;
             const company = document.getElementById('company').value;
             const phone = document.getElementById('phone').value;
-            
+
             const message = `Hello Lakshmanan Transport, I have an enquiry.\n\nName: ${name}\nCompany: ${company}\nPhone: ${phone}\n\nPlease get back to me.`;
             const whatsappUrl = `https://wa.me/919962603684?text=${encodeURIComponent(message)}`;
-            
+
             window.open(whatsappUrl, '_blank');
         });
     }
