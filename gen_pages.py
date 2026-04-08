@@ -50,7 +50,7 @@ layout_template = """<!DOCTYPE html>
         <section class="page-hero" style="background-image: url('assets/hero.png'); background-size: cover; background-position: center; position: relative; padding: 150px 0 80px 0; text-align: center; color: #fff; display: flex; align-items: center; justify-content: center; min-height: 250px;">
             <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(24,51,89,0.95) 0%, rgba(24,51,89,0.7) 100%); z-index: 1;"></div>
             <div class="container" style="position: relative; z-index: 2;">
-                <h1 style="font-size: 3.5rem; margin-bottom: 15px; font-weight: 800; text-shadow: 0 4px 15px rgba(0,0,0,0.3);">{page_title}</h1>
+                <h1 style="font-size: 3.5rem; margin-bottom: 15px; font-weight: 800; text-shadow: 0 4px 15px rgba(0,0,0,0.3); letter-spacing: -0.03em;">{page_title}</h1>
                 <p style="font-size: 1.1rem; color: rgba(255,255,255,0.9); font-weight: 500;">You are here: <a href="index.html" style="color: var(--primary); font-weight: 700;">Home</a> / {page_title}</p>
             </div>
         </section>
@@ -58,7 +58,7 @@ layout_template = """<!DOCTYPE html>
         <section class="service-detail section-padding" style="padding: 100px 0; background: #fafafa;">
             <div class="container service-detail-container">
                 <div class="service-detail-content">
-                    <h2 style="font-size: 2.8rem; color: var(--secondary); margin-bottom: 30px; font-weight: 800;">{page_title}</h2>
+                    <h2 style="font-size: 2.8rem; color: var(--secondary); margin-bottom: 30px; font-weight: 800; letter-spacing: -0.02em;">{page_title}</h2>
                     {paragraphs}
                     <a href="https://wa.me/919962603684" class="btn btn-primary" style="margin-top: 10px; background:#25d366; color:#fff; border:none;"><i class='bx bxl-whatsapp' style='font-size:1.4rem; margin-right:8px;'></i> Reply on WhatsApp</a>
                 </div>

@@ -38,8 +38,10 @@ h1,
 h2,
 h3 {
     font-family: var(--font-heading);
-    font-weight: 600;
-    line-height: 1.2;
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--secondary);
+    letter-spacing: -0.02em;
 }
 
 a {
@@ -68,11 +70,11 @@ img {
 .subtitle {
     display: inline-block;
     color: var(--primary);
-    font-size: 0.9rem;
-    font-weight: 600;
+    font-size: 0.85rem;
+    font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
 }
 
 .section-header {
@@ -81,8 +83,10 @@ img {
 }
 
 .section-header h2 {
-    font-size: 2.5rem;
-    margin-bottom: 16px;
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: var(--secondary);
 }
 
 .section-header p {
@@ -414,9 +418,11 @@ img {
 .hero-text h1 {
     margin-bottom: 24px;
     line-height: 1.1;
-    font-size: 3.5rem;
+    font-size: 4rem;
+    font-weight: 800;
     color: #FFFFFF;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    letter-spacing: -0.03em;
 }
 
 .hero-text p {
@@ -783,10 +789,12 @@ img {
 }
 
 .about-headline {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    font-size: 3.2rem;
+    font-weight: 800;
+    margin-bottom: 24px;
     color: var(--secondary);
-    line-height: 1.2;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
 }
 
 .about-headline span {
